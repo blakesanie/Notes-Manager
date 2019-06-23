@@ -1,4 +1,4 @@
-# Notes Manager
+# Notes Manager (β)
 
 In college, I take handwritten notes on an iPad using [Notability](https://www.gingerlabs.com). To access my notes off-device without paying for iCloud sync/storage, I built [this website](http://www.blakesanie.com/notes) for note access through the browser.
 
@@ -6,7 +6,7 @@ The webpage, though, needs an updated, parsable directory of notes. Notability m
 
 A Python script scrapes the backup folder, organizes note documents into JSON, and optionally pushes the data to the repo for my site (or another) to query with the help of [Github Pages](https://pages.github.com).
 
-This entire process has been built into a simple shell command, executable anywhere in the terminal.
+This entire process is built into a simple shell command, executable anywhere in the terminal.
 
 ## Use for yourself
 
@@ -18,13 +18,13 @@ $ git clone https://github.com/blakesanie/Notes-Manager.git
 
 2.  In main.py, declare the folder ID where your notes are located (line 6)
 
+- This value can be found within the folder's url: https:<span></span>//drive.google.com/drive/u/1/folders/<span style="color: green; text-decoration: underline">**FOLDER_ID**</span>
+
 ```python
 FOLDER_ID = "YOUR_FOLDER_ID_HERE"
 ```
 
-This value can be found within the folder's url: https:<span></span>//drive.google.com/drive/u/1/folders/<span style="color: green">**FOLDER_ID**</span>
-
-3.  In commands.sh, set the project directory's path (line 8)
+3.  In commands.sh, set the project directory's path (line 5)
 
 ```shell
 cd /absolute/path/to/project/directory
