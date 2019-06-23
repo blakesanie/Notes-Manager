@@ -27,7 +27,9 @@ def getChildrenForFolder(folderId):
         if file["mimeType"] == "application/vnd.google-apps.folder":
             out[file["title"]] = getChildrenForFolder(file["id"])
         else:
-            out[file["title"]] = file["embedLink"]
+            print(json.dumps(file, sort_keys=True, indent=4))
+            print("\n\n\n\n\n\n")
+            out[file["title"]] = file["id"]
     return out
 
 with open('notes.json', 'w') as out:
